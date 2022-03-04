@@ -6,7 +6,7 @@
     app:startDestination="@id/rootFragment">
     <fragment
         android:id="@+id/rootFragment"
-        android:name="com.ericmyval.uitestwork.RootFragment"
+        android:name="com.ericmyval.uitestwork.menu.RootFragment"
         android:label="fragment_root"
         tools:layout="@layout/fragment_root" >
         <action
@@ -26,12 +26,12 @@
     </fragment>
     <fragment
         android:id="@+id/scannerFragment"
-        android:name="com.ericmyval.uitestwork.ScannerFragment"
+        android:name="com.ericmyval.uitestwork.bluetooth.ScannerFragment"
         android:label="fragment_box"
         tools:layout="@layout/fragment_scanner" />
     <fragment
         android:id="@+id/imageFragment"
-        android:name="com.ericmyval.uitestwork.ImageFragment"
+        android:name="com.ericmyval.uitestwork.image.ImageFragment"
         android:label="fragment_image"
         tools:layout="@layout/fragment_image" />
 </navigation>

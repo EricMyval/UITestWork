@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ericmyval.uitestwork.ImageFragment"
+    tools:context="com.ericmyval.uitestwork.image.ImageFragment"
     android:orientation="horizontal">
 
     <ImageView
@@ -15,7 +15,7 @@
         android:src="@drawable/norm"
         tools:ignore="ContentDescription,MissingConstraints" />
 
-    <com.ericmyval.uitestwork.RoundedLinearLayout
+    <com.ericmyval.uitestwork.custom.ui.RoundedLinearLayout
         android:id="@+id/rllImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,7 +31,7 @@
             android:src="@drawable/no_norm"
             tools:ignore="ContentDescription" />
 
-    </com.ericmyval.uitestwork.RoundedLinearLayout>
+    </com.ericmyval.uitestwork.custom.ui.RoundedLinearLayout>
 
 
     <RelativeLayout
@@ -43,7 +43,8 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true">
+            android:layout_alignParentBottom="true"
+            tools:ignore="UselessParent">
 
             <ImageView
                 android:id="@+id/iLine"
@@ -56,13 +57,13 @@
         </LinearLayout>
     </RelativeLayout>
 
-
-
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
         tools:ignore="MissingConstraints"
+        android:text="@string/GoImageAnim"
         tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

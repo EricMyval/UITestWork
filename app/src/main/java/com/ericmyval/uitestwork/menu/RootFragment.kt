@@ -1,4 +1,4 @@
-package com.ericmyval.uitestwork
+package com.ericmyval.uitestwork.menu
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -14,6 +14,7 @@ import androidx.core.view.marginStart
 import androidx.core.view.marginTop
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.ericmyval.uitestwork.R
 import com.ericmyval.uitestwork.databinding.FragmentRootBinding
 import kotlin.math.max
 

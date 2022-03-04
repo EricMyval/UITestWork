@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.ericmyval.uitestwork.RootFragment">
+    tools:context="com.ericmyval.uitestwork.menu.RootFragment">
+
     <LinearLayout
         android:id="@+id/llAppContainerTop"
         android:layout_width="match_parent"

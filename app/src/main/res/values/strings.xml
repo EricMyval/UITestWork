@@ -2,4 +2,5 @@
     <string name="app_name">UITestWork</string>
     <string name="BLTitle">Bluetooth</string>
     <string name="Player">Не исполняется</string>
+    <string name="GoImageAnim">Запустить анимацию</string>
 </resources>

@@ -10,4 +10,4 @@
     app:defaultNavHost="true"
     android:background="@drawable/me"
     app:navGraph="@navigation/nav_graph"
-    tools:context=".HomeActivity" />
+    tools:context=".main.HomeActivity" />

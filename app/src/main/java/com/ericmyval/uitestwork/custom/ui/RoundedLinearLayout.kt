@@ -1,4 +1,4 @@
-package com.ericmyval.uitestwork
+package com.ericmyval.uitestwork.custom.ui
 
 import android.content.Context
 import android.graphics.Canvas
@@ -8,8 +8,8 @@ import android.util.AttributeSet
 import android.widget.LinearLayout
 
 class RoundedLinearLayout : LinearLayout {
-    var mPath: Path? = null
-    var mCornerRadius = 0f
+    var path: Path? = null
+    var cornerRadius = 0f
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
@@ -21,7 +21,7 @@ class RoundedLinearLayout : LinearLayout {
 
     override fun draw(canvas: Canvas) {
         canvas.save()
-        canvas.clipPath(mPath!!)
+        canvas.clipPath(path!!)
         super.draw(canvas)
         canvas.restore()
     }
@@ -29,8 +29,8 @@ class RoundedLinearLayout : LinearLayout {
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
         val r = RectF(0F, 0F, w.toFloat(), h.toFloat())
-        mPath = Path()
-        mPath!!.addRoundRect(r, mCornerRadius, mCornerRadius, Path.Direction.CW)
-        mPath!!.close()
+        path = Path()
+        path!!.addRoundRect(r, cornerRadius, cornerRadius, Path.Direction.CW)
+        path!!.close()
     }
 }

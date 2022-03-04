@@ -1,4 +1,4 @@
-package com.ericmyval.uitestwork
+package com.ericmyval.uitestwork.image
 
 import android.os.Bundle
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.animation.Animation
 import android.view.animation.Transformation
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
+import com.ericmyval.uitestwork.R
 import com.ericmyval.uitestwork.databinding.FragmentImageBinding
 
 
