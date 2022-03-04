@@ -31,6 +31,7 @@ class ImageFragment: Fragment(R.layout.fragment_image) {
     private fun expandListener(it: View, itLineWideBox: View, itLineWide: View, percents: ArrayList<Float>, heightBox: Int, duration: Long) {
         if (percents.isEmpty())
             return
+        itLineWide.visibility = View.VISIBLE
         val currentLine = (itLineWide.measuredHeight / 2)
         val current = it.measuredHeight
         val subtract = current - (heightBox * percents[0]).toInt()

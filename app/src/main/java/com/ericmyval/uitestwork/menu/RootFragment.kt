@@ -35,13 +35,16 @@ class RootFragment: Fragment(R.layout.fragment_root) {
         binding.btnRouter.setOnClickListener(btnMenuListener)
         binding.btnWifi.setOnClickListener(btnMenuListener)
         binding.btnBL.setOnClickListener(btnMenuListener)
+        binding.btnAirplane.setOnClickListener(btnMenuListener)
         binding.btnBL.setOnLongClickListener {
             btnMenuListener.onClick(it)
             findNavController().navigate(R.id.action_rootFragment_to_scannerFragment)
             return@setOnLongClickListener true
         }
-        binding.btnAirplane.setOnClickListener {
+        binding.btnAirplane.setOnLongClickListener {
+            btnMenuListener.onClick(it)
             findNavController().navigate(R.id.action_rootFragment_to_imageFragment)
+            return@setOnLongClickListener true
         }
     }
 
@@ -68,8 +71,8 @@ class RootFragment: Fragment(R.layout.fragment_root) {
         it.measure(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
         val targetHeight: Int = it.measuredHeight + resources.getDimension(R.dimen.circle_background_margin).toInt()
         val currentHeight = it.layoutParams.height
-        if (currentHeight != defSizeBoxes)
-            return@OnLongClickListener false
+        if (currentHeight == targetHeight)
+            return@OnLongClickListener true
         val anim: Animation = object : Animation(){
             @SuppressLint("ResourceType")
             override fun applyTransformation(interpolatedTime: Float, t: Transformation?) {
@@ -86,6 +89,7 @@ class RootFragment: Fragment(R.layout.fragment_root) {
                 return true
             }
         }
+
         anim.duration = (targetHeight / it.context.resources.displayMetrics.density).toInt().toLong()
         vibrator(50L)
         it.startAnimation(anim)
@@ -94,7 +98,7 @@ class RootFragment: Fragment(R.layout.fragment_root) {
 
     private val collapseListener = View.OnClickListener {
         val initialHeight: Int = it.measuredHeight
-        if (initialHeight == defSizeBoxes)
+        if (initialHeight <= defSizeBoxes + 1)
             return@OnClickListener
         val anim: Animation = object : Animation() {
             override fun applyTransformation(interpolatedTime: Float, t: Transformation?) {
