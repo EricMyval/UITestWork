@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UITestWork</string>
+    <string name="BLTitle">Bluetooth</string>
+    <string name="Player">Не исполняется</string>
+</resources>

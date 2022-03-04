@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.ericmyval.uitestwork.RootFragment">
+    <LinearLayout
+        android:id="@+id/llAppContainerTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/circle_background_margin"
+        android:layout_marginStart="@dimen/circle_background_margin"
+        tools:ignore="MissingConstraints">
+
+        <TableLayout
+            android:id="@+id/tlTable2"
+            style="@style/MenuBackStyle">
+
+            <TableRow style="@style/TableRowStyle">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnAirplane"
+                    android:src="@drawable/airplane"
+                    style="@style/TableButtonStyle"
+                    tools:ignore="ContentDescription" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnMobile"
+                    style="@style/TableButtonStyle"
+                    android:src="@drawable/mobile_data"
+                    tools:ignore="ContentDescription" />
+            </TableRow>
+
+            <TableRow style="@style/TableRowStyle">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnWifi"
+                    style="@style/TableButtonStyle"
+                    android:src="@drawable/wifi"
+                    tools:ignore="ContentDescription" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnBL"
+                    style="@style/TableButtonStyle"
+                    android:src="@drawable/bluetooth"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription" />
+            </TableRow>
+
+            <TableRow style="@style/TableRowStyle">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnDrop"
+                    style="@style/TableButtonStyle"
+                    android:src="@drawable/airdrop"
+                    tools:ignore="ContentDescription" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnRouter"
+                    style="@style/TableButtonStyle"
+                    android:src="@drawable/router"
+                    tools:ignore="ContentDescription" />
+            </TableRow>
+
+        </TableLayout>
+
+        <LinearLayout
+            style="@style/MenuBackStyle">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/circle_background_margin"
+                android:layout_marginTop="@dimen/circle_background_margin"
+                android:text="@string/Player"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:singleLine="false" />
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/previous_button"
+                    app:tint="@color/white_transparent"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/play_button"
+                    app:tint="@color/white"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/next_button"
+                    app:tint="@color/white_transparent"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/circle_background_margin"
+        android:layout_marginStart="@dimen/circle_background_margin"
+        tools:ignore="DisableBaselineAlignment">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size_back"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/menu_size_back"
+                android:orientation="horizontal"
+                android:layout_weight="1.0"
+                tools:ignore="InefficientWeight,NestedWeights">
+                <LinearLayout
+                    android:layout_height="80dp"
+                    style="@style/MenuBackStyle">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_height="80dp"
+                    style="@style/MenuBackStyle">
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                style="@style/MenuBackStyle">
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size_back"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <LinearLayout
+                style="@style/MenuBackStyle">
+            </LinearLayout>
+            <LinearLayout
+                style="@style/MenuBackStyle">
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

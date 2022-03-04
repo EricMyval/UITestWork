@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/rootFragment">
+    <fragment
+        android:id="@+id/rootFragment"
+        android:name="com.ericmyval.uitestwork.RootFragment"
+        android:label="fragment_root"
+        tools:layout="@layout/fragment_root" >
+        <action
+            android:id="@+id/action_rootFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_rootFragment_to_imageFragment"
+            app:destination="@id/imageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.ericmyval.uitestwork.ScannerFragment"
+        android:label="fragment_box"
+        tools:layout="@layout/fragment_scanner" />
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.ericmyval.uitestwork.ImageFragment"
+        android:label="fragment_image"
+        tools:layout="@layout/fragment_image" />
+</navigation>
